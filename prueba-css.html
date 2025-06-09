@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable con Bordes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f5;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: linear-gradient(135deg, #6c63ff, #b09fff);
+      color: white;
+      padding: 14px 80px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .dropbtn:hover {
+      background: linear-gradient(135deg, #5b52e6, #a18ff8);
+      transform: scale(1.03);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+      border: 1px solid #ddd;
+      margin: 6px 10px;
+      border-radius: 8px;
+      background-color: #fff;
+      transition: background-color 0.2s ease, padding-left 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f5;
+      padding-left: 26px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menú</button>
+    <div class="dropdown-content">
+      <a href="#vista1">Vista 1</a>
+      <a href="#vista2">Vista 2</a>
+      <a href="#vista3">Vista 3</a>
+    </div>
+  </div>
+
+</body>
+</html>
